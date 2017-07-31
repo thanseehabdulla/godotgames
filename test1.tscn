@@ -1,0 +1,50 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://test1.gd" type="Script" id=1]
+
+[node name="Panel" type="Panel"]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 271.0
+margin/top = 171.0
+margin/right = 682.0
+margin/bottom = 420.0
+script/script = ExtResource( 1 )
+
+[node name="Label" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 30.0
+margin/top = 93.0
+margin/right = 439.0
+margin/bottom = 107.0
+text = "this is a test"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="Button" type="Button" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 137.0
+margin/top = 163.0
+margin/right = 268.0
+margin/bottom = 183.0
+toggle_mode = false
+enabled_focus_mode = 2
+shortcut = null
+text = "press me"
+flat = false
+
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+
+
